@@ -1,0 +1,45 @@
+form {
+  border: black 2px solid;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column; 
+  float: left;
+}
+
+#name,
+#pass {
+  width: 130px;
+}
+
+fieldset {
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+#enviar {
+  width: 90px;
+  margin-top: 2em;
+  padding: 0.1em;
+}
+
+input:not([type="submit"]):focus {
+  background: red;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 5px 4px green;
+  /* X Y BLUR SPREAD COLOR */
+}
+
+input[type="checkbox"]:checked+label {
+  color: green;
+}
+
+input[type="checkbox"] {
+  box-shadow: 0 0 5px 4px red;
+}
+
+input[type="checkbox"]+label {
+  color: red;
+}

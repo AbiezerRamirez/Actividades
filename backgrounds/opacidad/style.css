@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+.background {
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    background: #777 url(https://i.blogs.es/594843/chrome/450_1000.jpg) no-repeat fixed;
+    background-size: 50vw;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .2;
+}
+
+
+p {
+    margin: 0;
+    /* color: #fff; */
+}
+
+
+/* .bg-doge {
+  
+    extra style to center the content
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bg-doge:before {
+    content: "";
+    background-image: url(bg-doge.jpeg);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: .6;
+  } */

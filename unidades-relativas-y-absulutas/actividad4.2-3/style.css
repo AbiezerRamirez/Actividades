@@ -1,0 +1,15 @@
+div {
+    margin: 1rem;
+}
+
+div:nth-child(1) {
+    background: #777;
+    width: 10vw;
+    height: 18vh;
+}
+
+div:nth-child(2) {
+    background: #777;
+    width: 10vmax;
+    height: 18vmin;
+}

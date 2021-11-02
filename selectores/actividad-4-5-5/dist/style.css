@@ -1,0 +1,6 @@
+p ~ ul {
+    background-color: red;
+}
+/* p + ul {
+    background-color: red;
+} */

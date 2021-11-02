@@ -1,0 +1,10 @@
+
+div > p {
+    color: red;
+    border: 1px solid red;
+}
+
+div > p + p ~ p {
+    color: blue;
+    border-color: blue;
+}

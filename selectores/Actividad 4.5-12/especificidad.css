@@ -1,0 +1,7 @@
+ul.menu li.home a {} /* 2,3 */
+
+body div.destacado p {}  /* 1,3 */
+
+div:first-child::first-letter {}  /* 1,2 */
+
+html > head+body ul#nav *.miclase a:link{} /* 1,2,5 */

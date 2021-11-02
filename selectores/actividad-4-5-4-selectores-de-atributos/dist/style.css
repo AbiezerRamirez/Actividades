@@ -1,0 +1,27 @@
+[id] {
+    color: red;
+}
+
+[title="summary"] {
+    color: blue;
+}
+
+[class~="XHTML"] {
+    color: orange;
+}
+
+[lang|="en"] {
+    color: yellow;
+}
+
+[class^="be"] {
+    color: gray;
+}
+
+[class*="con"] {
+    color: green;
+}
+
+[class$="x"] {
+    color: black;
+}

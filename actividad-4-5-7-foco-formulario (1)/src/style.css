@@ -1,0 +1,24 @@
+form {
+  border: black 2px solid;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column; 
+  float: left;
+}
+
+#name,
+#pass {
+  width: 130px;
+}
+
+fieldset {
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+#enviar {
+  width: 90px;
+  margin-top: 2em;
+  padding: 0.1em;
+}

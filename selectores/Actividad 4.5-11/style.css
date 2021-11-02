@@ -1,0 +1,23 @@
+.registro::before {
+    content: "Debes registrarte para ver el articulo completo. ";
+    background-color: gray;
+}
+
+.registro::after {
+    content: " Debes registrarte para ver el articulo completo";
+    background-color: gray;
+}
+
+p::first-line {
+    color: blue;
+}
+
+p::first-letter {
+    color: red;
+    font-size: 2rem;
+}
+
+p::selection {
+    color: white;
+    background-color: greenyellow;
+}

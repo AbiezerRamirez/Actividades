@@ -1,0 +1,51 @@
+p {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+p:nth-child(1) {
+    border: none;
+}
+
+p:nth-child(2) {
+    border: 1px hidden #000;
+}
+
+p:nth-child(3) {
+    border: 1px solid #000;
+}
+
+p:nth-child(4) {
+    border: 3px dotted #409;
+}
+
+p:nth-child(5) {
+    border: 7px double #333;
+}
+
+p:nth-child(6) {
+    border: 5px dashed #35b;
+}
+
+p:nth-child(7) {
+    border: 10px groove #b59;
+}
+
+p:nth-child(8) {
+    border: 15px ridge #7ba;
+}
+
+p:nth-child(9) {
+    border: 7px inset #999;
+}
+
+p:nth-child(10) {
+    border: 7px outset #999;
+}
+
+p:nth-child(11) {
+    border: 15px ridge #7ba;
+    border-radius: 0 10px 5px 50px;
+}
+

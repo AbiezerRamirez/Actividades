@@ -1,0 +1,88 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+/* Centimetros */
+section:nth-child(1)> h1 {
+    font-size: 4cm;
+}
+section:nth-child(1)> h2 {
+    font-size: 3cm;
+}
+section:nth-child(1)> h3 {
+    font-size: 2cm;
+}
+section:nth-child(1)> p {
+    font-size: 1cm;
+}
+
+/* Milimetros */
+section:nth-child(2)> h1 {
+    font-size: 4mm;
+}
+section:nth-child(2)> h2 {
+    font-size: 3mm;
+}
+section:nth-child(2)> h3 {
+    font-size: 2mm;
+}
+section:nth-child(2)> p {
+    font-size: 1mm;
+}
+
+/* Pulgadas */
+section:nth-child(3)> h1 {
+    font-size: 4in;
+}
+section:nth-child(3)> h2 {
+    font-size: 3in;
+}
+section:nth-child(3)> h3 {
+    font-size: 2in;
+}
+section:nth-child(3)> p {
+    font-size: 1in;
+}
+
+/* Pixeles */
+section:nth-child(4)> h1 {
+    font-size: 4px;
+}
+section:nth-child(4)> h2 {
+    font-size: 3px;
+}
+section:nth-child(4)> h3 {
+    font-size: 2px;
+}
+section:nth-child(4)> p {
+    font-size: 1px;
+}
+
+/* Puntos */
+section:nth-child(5)> h1 {
+    font-size: 4pt;
+}
+section:nth-child(5)> h2 {
+    font-size: 3pt;
+}
+section:nth-child(5)> h3 {
+    font-size: 2pt;
+}
+section:nth-child(5)> p {
+    font-size: 1pt;
+}
+
+/* Picas */
+section:nth-child(6)> h1 {
+    font-size: 4pc;
+}
+section:nth-child(6)> h2 {
+    font-size: 3pc;
+}
+section:nth-child(6)> h3 {
+    font-size: 2pc;
+}
+section:nth-child(6)> p {
+    font-size: 1pc;
+}
