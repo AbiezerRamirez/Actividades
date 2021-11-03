@@ -1,0 +1,8 @@
+div > p:nth-child(2) {
+    /* position: relative; */
+    /* position: absolute; */
+    /* position: fixed; */
+    position: sticky;
+    top: 40px;
+    left: 30px;
+}
