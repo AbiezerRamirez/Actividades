@@ -1,0 +1,17 @@
+div#paginacion {
+  background-color: lightgray;
+  padding: 1em;
+  font-size: 2em;
+  /* clear: both; */
+}
+
+.anterior {
+  position: relative;
+  left: 0;
+}
+
+.siguiente {
+  position: relative;
+  /* left: 100vw; */
+  left: 75vw;
+}

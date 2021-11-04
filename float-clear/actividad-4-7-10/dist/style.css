@@ -1,0 +1,27 @@
+figure:first-child {
+    float: left;
+}
+
+figure:nth-of-type(2) {
+    float: right;
+}
+
+figure:nth-of-type(3) {
+    float: left;
+    clear: left;
+}
+
+figure:nth-of-type(4) {
+    float: right;
+    clear: right;
+}
+
+figure:nth-of-type(5) {
+    float: left;
+    clear: left;
+}
+
+figure:last-of-type {
+    float: right;
+    clear: right;
+}

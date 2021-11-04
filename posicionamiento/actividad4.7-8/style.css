@@ -1,4 +1,18 @@
-div:first-child {
+div > div:first-child {
     position: absolute;
-    width: 75%;
+    left: 15%;
+    right: 15%;
+}
+
+.contenedor {
+    position: relative;
+}
+
+div > div:nth-child(2) {
+    position: fixed;
+    top: 180px;
+}
+
+div:not(div:first-child, div:nth-child(2), div:nth-child(3)) {
+    margin-top: 3em;
 }

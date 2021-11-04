@@ -1,0 +1,20 @@
+img:first-child {
+    float: left;
+}
+
+img[src^="imagenes/2"] {
+    float: right;
+}
+
+img:nth-child(2) {
+    float: right;
+}
+
+p {
+    clear: left;
+    /* clear: both; */
+}
+
+p:nth-child(3) ~ p {
+    clear: right;
+}

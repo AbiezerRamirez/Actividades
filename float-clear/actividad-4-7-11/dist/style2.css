@@ -1,0 +1,19 @@
+div#paginacion {
+    background-color: lightgray;
+    padding: 1em;
+    font-size: 2em;
+}
+
+.anterior {
+    float: left;
+}
+
+.siguiente {
+    float: right;
+}
+
+#paginacion::after {
+  content: "";
+  clear: both;
+  display: table;
+}
