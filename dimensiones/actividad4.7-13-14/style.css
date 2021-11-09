@@ -1,0 +1,33 @@
+div {
+    position: relative;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div:first-child {
+    background-color: red;
+    z-index: -1;
+}
+
+div:nth-child(2) {
+    background-color: rgba(36, 36, 170, 0.473);
+    top: -2em;
+    left: 2.5em;
+    z-index: 2;
+    /* opacity: .5; */
+}
+
+div:last-of-type {
+    background-color: yellow;
+    top: -11.5em;
+    left: 4em;
+    z-index: 1;
+}
