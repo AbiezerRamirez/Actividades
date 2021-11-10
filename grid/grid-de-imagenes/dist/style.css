@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.resultados {
+    margin: 1em;
+    list-style: none;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4,1fr);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

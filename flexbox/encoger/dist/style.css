@@ -1,0 +1,47 @@
+.padre {
+            background-color: #144205;
+            padding: 3px;
+            font-size:1em;
+            display:flex;
+            margin:3px;            
+        }
+
+        .hijo {
+            background-color: #5F9B4C;
+            margin:2px;
+            padding: 20px;
+            color: white;
+          
+        }
+
+/* Padre 2 */
+
+.padre:nth-child(2) {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.padre:nth-child(2) .hijo:first-child {
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+
+.padre:nth-child(2) .hijo:nth-child(2) {
+    flex-shrink: 2;
+}
+
+/* Padre 3 */
+
+.padre:nth-child(3) {
+    flex-wrap: wrap;
+}
+
+.padre:nth-child(3) .hijo:last-child {
+    order: -1;
+}
+
+/* Padre 4 */
+
+.padre:nth-child(4) .hijo {
+    max-width: 25%;
+}

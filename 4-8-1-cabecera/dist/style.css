@@ -4,7 +4,7 @@ ul {
 }
 
 li {
-    margin: 1em;
+    margin: .5em;
     padding: 1em;
     background-color: yellow;
 }
@@ -12,4 +12,13 @@ li {
 li:first-child {
     background-color: rgb(124, 124, 15);
     border-radius: 100%;
+}
+
+input {
+    border-radius: 1em;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
 }

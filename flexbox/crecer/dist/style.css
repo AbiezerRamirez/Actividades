@@ -1,0 +1,43 @@
+.padre {
+  background-color: #001f3f;
+  padding: 3px;
+  font-size: 1em;
+  display: flex;
+  margin: 3px;
+  gap:0.3em;
+}
+
+.hijo {
+  background-color: #0074d9;
+  padding: 20px;
+  color: white;
+}
+
+/* Padre 2 */
+
+.padre:nth-child(2) .hijo{
+  flex-grow: 1;
+}
+
+/* Padre 3 */
+
+.padre:nth-child(3) .hijo:first-child {
+  flex-grow: 2;
+}
+.padre:nth-child(3) .hijo:not(.hijo:last-child, .hijo:first-child) {
+  flex-grow: 1;
+}
+
+.padre:nth-child(3) .hijo:last-child {
+  order: -1;
+}
+
+/* Padre 4 */
+
+.padre:last-of-type {
+  justify-content: flex-end;
+}
+
+.padre:last-of-type .hijo:first-child {
+  margin-right: auto;
+}
