@@ -1,0 +1,264 @@
+/* === IMPORTANTE ===================================================
+			 No modificar estos estilos, ya que son imprescindibles para
+			 que la página se vea correctamente.
+			 ================================================================== */
+
+/*-- Básico ----------------------------------------------------------*/
+ul, ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* .clear {
+    clear: both;
+  } */
+  img {
+    border: none;
+  }
+  
+  /*-- Layout ----------------------------------------------------------*/
+  /* body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+  } */
+  
+  /* #cabecera,
+  #menu,
+  #lateral,
+  #contenido #principal,
+  #contenido #secundario,
+  #pie {
+    border: 2px solid #777;
+  } */
+  
+  /* #cabecera {
+    clear: both;
+  }
+  
+  #menu {
+    clear: both;
+  }
+  
+  #lateral {
+    float: left;
+    width: 20%;
+  }
+  
+  #contenido {
+    float: right;
+    width: 78%;
+  }
+  
+  #contenido #principal {
+    float: left;
+    width: 78%;
+  }
+  
+  #contenido #secundario {
+    float: right;
+    width: 20%;
+  }
+  
+  #pie {
+    clear: both;
+  } */
+  
+  /*-- Cabecera --------------------------------------------------------*/
+  /* #cabecera #logo {
+    float: left;
+  } */
+  
+  /* #cabecera #buscador {
+    float: right;
+  } */
+  
+  /*-- Menu ------------------------------------------------------------*/
+  /* #menu ul#menu_principal li {
+    display: inline;
+    float: left;
+  } */
+  
+  /*-- Sección Principal -----------------------------------------------*/
+  /* #contenido #principal .articulo img {
+    width: 100px;
+    float: left;
+  } */
+  
+  /*-- Pie de página ---------------------------------------------------*/
+  /* #pie .enlaces {
+    float: left;
+  }
+  
+  #pie .copyright {
+    float: right;
+  } */
+  
+  /* === IMPORTANTE ===================================================
+               A partir de aquí, se pueden añadir todos los estilos propios que
+               sean necesarios.
+               ================================================================== */
+  
+  * {
+    /* box-sizing: border-box; */
+    /* color: #000; */
+    font: .9em/1.4 arial;
+  }
+  
+  body {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 15vw 53vw 12vw;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "aside cont aside2"
+        "footer footer footer";
+  }
+  
+  #cabecera {
+    grid-area: header;
+    padding: 1em;
+  }
+  
+  #menu {
+    grid-area: nav;
+    padding: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid #004c99;
+  }
+  
+  #lateral {
+    grid-area: aside;
+    font-size: .9em;
+  }
+
+  .principal {
+      grid-area: cont;
+  }
+
+  .secundario {
+      grid-area: aside2;
+  }
+  
+  #pie {
+      grid-area: footer;
+    margin-top: 1em;
+    padding: .5em 0;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    background-color: #9991;
+  }
+
+  #buscador {
+      float: right;
+  }
+  
+  #menu_principal {
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
+  }
+  
+  #menu a:hover {
+      background-color: #cc660077;
+      color: #000;
+  }
+
+  #menu a {
+    color: #fff;
+    margin: 0 .5em;
+    font-size: 1.3em;
+    padding: .4em .7em;
+    border-radius: 1em;
+    text-decoration: none;
+    background-color: #cc6600;
+  }
+  
+  #noticias, #publicidad, #principal, #secundario {
+      padding: .5em;
+  }
+    
+  .articulo {
+    margin: .5em 0em;
+    display: inline-block;
+  }
+  
+  .articulo img {
+    float: left;
+    margin: .5em;
+    width: 10em;
+  }
+  
+  .articulo h2 {
+    color: #cc6600;
+    font-size: 1.6em;
+    line-height: 1.2;
+    margin-bottom: .3em;
+  }
+  
+  .articulo a {
+    color: #cc6600;
+  }
+  
+  .articulo p {
+    margin: .3em 0;
+  }
+  
+  #publicidad {
+    margin: .5em 0em;
+    display: inline-block;
+    border: 1px dashed #cc6600;
+    color: #555;
+  }
+  
+  #publicidad a:link {
+    color: #cc6600;
+  }
+  
+  .copyright {
+    color: #555;
+    float: right;
+    margin-right: 1em;
+  }
+  
+  #noticias {
+    border: 1px solid #c5c5c5;
+  }
+  
+  #secundario {
+    border: 1px solid #cc6600;
+  }
+  
+  #secundario h2 {
+    background-color: #cc6600;
+    margin: .3em 0;
+    padding: .3em;
+    color: #fff;
+  }
+  
+  .fecha {
+    display: block;
+    color: #999;
+  }
+  
+  #lateral #noticias h3 {
+    color: #003366;
+  }
+  
+  .clear {
+      display: none;
+  }
+
+@media all and (max-width: 700px){
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}

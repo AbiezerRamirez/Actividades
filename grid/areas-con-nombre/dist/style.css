@@ -1,0 +1,54 @@
+body {
+  max-width: 1200px;
+  margin: 10px auto;
+}
+header,
+section,
+main,
+footer {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.1em;
+}
+
+header,
+footer,
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* diseño 1 */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-areas: 
+    "header header header"
+    "side1 cont side2"
+    "side1 cont side2"
+    "side1 cont side2"
+    "side1 footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: side1;
+}
+
+.sidebar2 {
+  grid-area: side2;
+}
+
+.content {
+  grid-area: cont;
+}
+
+.footer {
+  grid-area: footer;
+}
