@@ -8,19 +8,20 @@ ul, ul li {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
+}
   
-  h1, h2, h3, p, form {
+h1, h2, h3, p, form {
     margin: 0;
     padding: 0;
-  }
+}
   
   /* .clear {
     clear: both;
   } */
-  img {
+
+img {
     border: none;
-  }
+}
   
   /*-- Layout ----------------------------------------------------------*/
   /* body {
@@ -105,13 +106,13 @@ ul, ul li {
                sean necesarios.
                ================================================================== */
   
-  * {
+* {
     /* box-sizing: border-box; */
     /* color: #000; */
     font: .9em/1.4 arial;
-  }
+}
   
-  body {
+body {
     margin: 0 10vw;
     display: grid;
     grid-template-columns: 15vw 53vw 12vw;
@@ -120,58 +121,58 @@ ul, ul li {
         "nav nav nav"
         "aside cont aside2"
         "footer footer footer";
-  }
+}
   
-  #cabecera {
+#cabecera {
     grid-area: header;
     padding: 1em;
-  }
+}
   
-  #menu {
+#menu {
     grid-area: nav;
     padding: .5em;
     margin-bottom: .5em;
     border-bottom: 1px solid #004c99;
-  }
+}
   
-  #lateral {
+#lateral {
     grid-area: aside;
     font-size: .9em;
-  }
+}
 
-  .principal {
-      grid-area: cont;
-  }
+.principal {
+    grid-area: cont;
+}
 
-  .secundario {
-      grid-area: aside2;
-  }
+.secundario {
+    grid-area: aside2;
+}
   
-  #pie {
-      grid-area: footer;
+#pie {
+    grid-area: footer;
     margin-top: 1em;
     padding: .5em 0;
     border-top: 1px solid #c5c5c5;
     border-bottom: 1px solid #c5c5c5;
     background-color: #9991;
-  }
+}
 
-  #buscador {
-      float: right;
-  }
+#buscador {
+    float: right;
+}
   
-  #menu_principal {
-      display: flex;
-      justify-content: center;
-      margin: 1em 0;
-  }
+#menu_principal {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
   
-  #menu a:hover {
-      background-color: #cc660077;
-      color: #000;
-  }
+#menu a:hover {
+    background-color: #cc660077;
+    color: #000;
+}
 
-  #menu a {
+#menu a {
     color: #fff;
     margin: 0 .5em;
     font-size: 1.3em;
@@ -179,86 +180,129 @@ ul, ul li {
     border-radius: 1em;
     text-decoration: none;
     background-color: #cc6600;
-  }
+}
   
-  #noticias, #publicidad, #principal, #secundario {
-      padding: .5em;
-  }
+#noticias, #publicidad, #principal, #secundario {
+    padding: .5em;
+}
     
-  .articulo {
+.articulo {
     margin: .5em 0em;
     display: inline-block;
-  }
+}
   
-  .articulo img {
+.articulo img {
     float: left;
     margin: .5em;
     width: 10em;
-  }
+}
   
-  .articulo h2 {
+.articulo h2 {
     color: #cc6600;
     font-size: 1.6em;
     line-height: 1.2;
     margin-bottom: .3em;
-  }
+}
   
-  .articulo a {
+.articulo a {
     color: #cc6600;
-  }
+}
   
-  .articulo p {
+.articulo p {
     margin: .3em 0;
-  }
+}
   
-  #publicidad {
+#publicidad {
     margin: .5em 0em;
     display: inline-block;
     border: 1px dashed #cc6600;
     color: #555;
-  }
+}
   
-  #publicidad a:link {
+#publicidad a:link {
     color: #cc6600;
-  }
+}
   
-  .copyright {
+.copyright {
     color: #555;
     float: right;
     margin-right: 1em;
-  }
+}
   
-  #noticias {
+#noticias {
     border: 1px solid #c5c5c5;
-  }
+}
   
-  #secundario {
+#secundario {
     border: 1px solid #cc6600;
-  }
+}
   
-  #secundario h2 {
+#secundario h2 {
     background-color: #cc6600;
     margin: .3em 0;
     padding: .3em;
     color: #fff;
-  }
+}
   
-  .fecha {
+.fecha {
     display: block;
     color: #999;
-  }
+}
   
-  #lateral #noticias h3 {
+#lateral #noticias h3 {
     color: #003366;
-  }
+}
   
-  .clear {
+.clear {
       display: none;
-  }
+}
 
-@media all and (max-width: 700px){
+@media all and (max-width: 812px){
     body {
         display: flex;
         flex-direction: column;
     }
+
+    #menu_principal {
+        flex-wrap: wrap;
+        row-gap: 1em;
+    }
+    
+    aside {
+        display: flex;
+        justify-content: space-around;
+        /* justify-content: stretch; */
+        align-items: center;
+        /* column-gap: 1em; */
+        flex-wrap: wrap;
+    }
+
+    #publicidad, #noticias {
+        /* margin: 0; */
+        width: 44%;
+        min-width: 140px;
+    }
+    
+    footer {
+        text-align: center;
+    }
+
+    .enlaces::after {
+        content: "\A";
+        white-space: pre;
+    }
+    
+    .copyright {
+        /* margin: 150em 0; */
+        float: none;
+    }
+/*    
+    header {
+        position: relative;
+    } */
+
+    /* #noticias { */
+        /* flex-basis: 44vw; */
+    /* } */
+
 }
