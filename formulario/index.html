@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <h2>Curriculum</h2>
+    <form action="/php/tratar_cv.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <progress max="4" value="1"></progress>
+            <div>
+                <label for="fname">Nombre:</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div>
+                <label for="lname">Apellidos:</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad"></div>
+            <div>
+                <label for="fnac">Fecha de Nacimiento:</label>
+                <input type="date" name="fnac" id="fnac">
+            </div>
+            <div>
+                <label for="phone">Telefono:</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+            <div>Sexo:
+                <input type="radio" name="sexo" id="hombre" value="h">
+                <label for="hombre">Hombre</label>
+                <input type="radio" name="sexo" id="mujer" value="m">
+                <label for="mujer">Mujer</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <progress max="4"value="2" ></progress>
+            <div>
+                <label for="user">Usuario:</label>
+                <input type="text" name="user" id="user">
+            </div>
+            <div>
+                <label for="mail">Email:</label>
+                <input type="email" name="mail" id="mail">
+            </div>
+            <div>
+                <label for="pass">Contraseña:</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+        </fieldset>
+        <fieldset>
+            <progress max="4" value="3"></progress>
+            <div>
+                <label for="img">Foto:</label>
+                <input type="file" name="img" id="img" accept="image/png, image/jpeg">
+            </div>
+            <div>
+                <label for="color">Color:</label>
+                <input type="color" name="color" id="color">
+            </div>
+            <div>
+                <label for="rang">Elige un rango:</label>
+                <input type="range" name="rang" id="rang" min="1" max="10">
+            </div>
+            <div>
+                <label for="op">Opciones:</label>
+                <select name="op" id="opciones">
+                    <option value="1">Opcion 1</option>
+                    <option value="2">Opcion 2</option>
+                    <option value="3">Opcion 3</option>
+                    <option value="4">Opcion 4</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <progress max="4" value="4"></progress>
+            <div>
+                <label for="url">URL de Referencias:</label>
+                <input type="url" name="url" id="url">
+            </div>
+            <div>
+                <textarea name="about" id="about" cols="30" rows="10">Acerca de ti</textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="terms" id="terms">
+                <label for="terms">Acepto los Terminos y Condiciones</label>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
