@@ -12,30 +12,72 @@ h2 {
 form {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+form > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+button {
+    width: 4em;
+}
+
+form > div > input {
+    width: 7em;
 }
 
 fieldset {
-    padding: 1.5em;
-    text-align: center;
     min-width: min-content;
+    height: max-content;
+    text-align: center;
+    padding: 1.5em;
     flex-grow: 1;
     margin: 1em;
-    height: max-content;
 }
 
 fieldset div {
-    margin: 1em;
+    margin-top: 1.5em;
 }
 
-input {
+progress {
+    width: 70%;
+    /* margin-bottom: 2em; */
+}
+
+fieldset input:not([type="color"], [type="radio"], [type="date"], [type="checkbox"]) {
     padding: .3em;
+    width: 70%;
+}
+
+#vRango::after { 
+    content: '\A';
+    white-space: pre;
+}
+
+optgroup {
+    background-color: #ff0000;
+}
+
+option {
+    background-color: #ffff;
+}
+
+textarea {
+    width: 96%;
 }
 
 fieldset:focus-within {
     background-color: darkkhaki;
 }
 
-form > div {
-    text-align: center;
-    width: 100%;
+input:required:focus:invalid {
+    background-color: #ff000099;
+}
+
+input:required:valid {
+    background: #fff url('assets/icono_ok.gif') right no-repeat;
 }
