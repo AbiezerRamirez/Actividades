@@ -1,9 +1,11 @@
-/* === IMPORTANTE ===================================================
-			 No modificar estos estilos, ya que son imprescindibles para
-			 que la página se vea correctamente.
-			 ================================================================== */
+html {
+    font-size: 100%;
+}
 
-/*-- Básico ----------------------------------------------------------*/
+* {
+    font: .9em/1.4 arial;
+}
+
 ul, ul li {
     margin: 0;
     padding: 0;
@@ -14,104 +16,15 @@ h1, h2, h3, p, form {
     margin: 0;
     padding: 0;
 }
-  
-  /* .clear {
-    clear: both;
-  } */
 
-img {
-    border: none;
+#noticias, #publicidad, main, #secundario {
+    padding: .5em;
 }
   
-  /*-- Layout ----------------------------------------------------------*/
-  /* body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-  } */
-  
-  /* #cabecera,
-  #menu,
-  #lateral,
-  #contenido #principal,
-  #contenido #secundario,
-  #pie {
-    border: 2px solid #777;
-  } */
-  
-  /* #cabecera {
-    clear: both;
-  }
-  
-  #menu {
-    clear: both;
-  }
-  
-  #lateral {
-    float: left;
-    width: 20%;
-  }
-  
-  #contenido {
-    float: right;
-    width: 78%;
-  }
-  
-  #contenido #principal {
-    float: left;
-    width: 78%;
-  }
-  
-  #contenido #secundario {
-    float: right;
-    width: 20%;
-  }
-  
-  #pie {
-    clear: both;
-  } */
-  
-  /*-- Cabecera --------------------------------------------------------*/
-  /* #cabecera #logo {
-    float: left;
-  } */
-  
-  /* #cabecera #buscador {
-    float: right;
-  } */
-  
-  /*-- Menu ------------------------------------------------------------*/
-  /* #menu ul#menu_principal li {
-    display: inline;
-    float: left;
-  } */
-  
-  /*-- Sección Principal -----------------------------------------------*/
-  /* #contenido #principal .articulo img {
-    width: 100px;
-    float: left;
-  } */
-  
-  /*-- Pie de página ---------------------------------------------------*/
-  /* #pie .enlaces {
-    float: left;
-  }
-  
-  #pie .copyright {
-    float: right;
-  } */
-  
-  /* === IMPORTANTE ===================================================
-               A partir de aquí, se pueden añadir todos los estilos propios que
-               sean necesarios.
-               ================================================================== */
-  
-* {
-    /* box-sizing: border-box; */
-    /* color: #000; */
-    font: .9em/1.4 arial;
+article a, article h2, #publicidad a:link {
+    color: #cc6600;
 }
-  
+ 
 body {
     margin: 0 10vw;
     display: grid;
@@ -119,121 +32,103 @@ body {
     grid-template-areas: 
         "header header header"
         "nav nav nav"
-        "aside cont aside2"
+        "aside main sec"
         "footer footer footer";
 }
   
-#cabecera {
+header {
     grid-area: header;
     padding: 1em;
-}
-  
-#menu {
-    grid-area: nav;
-    padding: .5em;
-    margin-bottom: .5em;
-    border-bottom: 1px solid #004c99;
-}
-  
-#lateral {
-    grid-area: aside;
-    font-size: .9em;
-}
-
-.principal {
-    grid-area: cont;
-}
-
-.secundario {
-    grid-area: aside2;
-}
-  
-#pie {
-    grid-area: footer;
-    margin-top: 1em;
-    padding: .5em 0;
-    border-top: 1px solid #c5c5c5;
-    border-bottom: 1px solid #c5c5c5;
-    background-color: #9991;
 }
 
 #buscador {
     float: right;
 }
-  
+
+nav {
+    border-radius: 1em;
+    background-color: #585857;
+    grid-area: nav;
+    padding: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid #004c99;
+}
+
+nav a:hover {
+    background-color: #fff9;
+    color: #000;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 .5em;
+    font-size: 1.3em;
+    padding: .4em .7em;
+    border-radius: .5em;
+    text-decoration: none;
+    background-color: #cc6600;
+}
+
 #menu_principal {
     display: flex;
     justify-content: center;
     margin: 1em 0;
 }
+
+aside {
+    grid-area: aside;
+}
   
-#menu a:hover {
-    background-color: #cc660077;
-    color: #000;
+#noticias {
+    border: 1px solid #c5c5c5;
 }
 
-#menu a {
-    color: #fff;
-    margin: 0 .5em;
-    font-size: 1.3em;
-    padding: .4em .7em;
-    border-radius: 1em;
-    text-decoration: none;
-    background-color: #cc6600;
+aside #noticias h3 {
+    color: #003366;
 }
   
-#noticias, #publicidad, #principal, #secundario {
-    padding: .5em;
+.fecha {
+    display: block;
+    color: #999;
 }
-    
-.articulo {
-    margin: .5em 0em;
-    display: inline-block;
-}
-  
-.articulo img {
-    float: left;
-    margin: .5em;
-    width: 10em;
-}
-  
-.articulo h2 {
-    color: #cc6600;
-    font-size: 1.6em;
-    line-height: 1.2;
-    margin-bottom: .3em;
-}
-  
-.articulo a {
-    color: #cc6600;
-}
-  
-.articulo p {
-    margin: .3em 0;
-}
-  
+
 #publicidad {
     margin: .5em 0em;
     display: inline-block;
     border: 1px dashed #cc6600;
     color: #555;
 }
-  
-#publicidad a:link {
-    color: #cc6600;
+
+main {
+    grid-area: main;
+}
+
+    
+article {
+    margin: 1em 0em;
+    display: inline-block;
 }
   
-.copyright {
-    color: #555;
-    float: right;
-    margin-right: 1em;
+article img {
+    border: none;
+    float: left;
+    margin: .9em;
+    width: 7em;
 }
   
-#noticias {
-    border: 1px solid #c5c5c5;
+article h2 {
+    font-size: 1.6em;
+    line-height: 1.2;
+    margin-bottom: .3em;
 }
+
   
+article p {
+    margin: .3em 0;
+}
+
 #secundario {
+    grid-area: sec;
     border: 1px solid #cc6600;
 }
   
@@ -243,26 +138,37 @@ body {
     padding: .3em;
     color: #fff;
 }
-  
-.fecha {
-    display: block;
-    color: #999;
-}
-  
-#lateral #noticias h3 {
-    color: #003366;
-}
-  
-.clear {
-      display: none;
+
+footer {
+    grid-area: footer;
+    margin-top: 1em;
+    padding: .5em 0;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    background-color: #9991;
 }
 
+.copyright {
+    color: #555;
+    float: right;
+    margin-right: 1em;
+}
+  
 @media all and (max-width: 812px){
     body {
         display: flex;
         flex-direction: column;
     }
 
+    header {
+        text-align: center;
+    }
+
+    #buscador {
+        margin-top: 1em;
+        float: none;
+    }
+    
     #menu_principal {
         flex-wrap: wrap;
         row-gap: 1em;
@@ -270,21 +176,25 @@ body {
     
     aside {
         display: flex;
+        order: 5;
         justify-content: space-around;
-        /* justify-content: stretch; */
         align-items: center;
-        /* column-gap: 1em; */
         flex-wrap: wrap;
     }
 
     #publicidad, #noticias {
-        /* margin: 0; */
         width: 44%;
         min-width: 140px;
+    }
+
+    #secundario {
+        order: 7;
+        margin-top: 2em;
     }
     
     footer {
         text-align: center;
+        order: 10;
     }
 
     .enlaces::after {
@@ -293,16 +203,41 @@ body {
     }
     
     .copyright {
-        /* margin: 150em 0; */
         float: none;
     }
-/*    
-    header {
-        position: relative;
-    } */
+}
 
-    /* #noticias { */
-        /* flex-basis: 44vw; */
-    /* } */
+@media print {
+    main, section {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
+    #buscador {
+        display: none !important;
+    }
+    
+    nav {
+        display: none !important;
+    }
+    
+    aside {
+        display: none !important;
+    }
+    
+    .enlaces {
+        display: none !important;
+    }
+
+    p {
+        font-size: 12pt !important;
+    }
+
+    h1 {
+        font-size: 18pt !important;
+    }
+
+    h2 {
+        font-size: 16pt !important;
+    }
 }
