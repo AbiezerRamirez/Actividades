@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* TITULO */
+
+h2 {
+    margin: .5em;
+    font-size: 3em;
+    text-align: center;
+}
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+/* FIELDSETS */
+
+fieldset {
+    min-width: min-content;
+    height: max-content;
+    text-align: center;
+    padding: 1.5em;
+    flex-grow: 1;
+    margin: 1em;
+}
+
+fieldset div {
+    margin-top: 1.5em;
+}
+
+fieldset:focus-within {
+    background-color: rgb(189, 183, 107);
+}
+
+/* BARRAS DE PROGRESO */
+
+progress {
+    width: 70%;
+}
+
+fieldset input:not([type="color"], [type="radio"], [type="date"], [type="checkbox"]) {
+    padding: .3em;
+    width: 70%;
+}
+
+/* FIELDSET 3 */
+
+#vRango::after { 
+    content: '\A';
+    white-space: pre;
+}
+
+optgroup {
+    background-color: #ff9975;
+}
+
+option {
+    background-color: #ffff;
+}
+
+/* FIELDSET 4 */
+
+textarea {
+    width: 96%;
+}
+
+/* CAMPOS REQUERIDOS */
+
+input:required:focus:invalid {
+    background-color: #ff000099;
+}
+
+input:required:valid {
+    background: #fff url('../assets/icono_ok.gif') right no-repeat;
+}
+
+/* BOTONES */
+
+form > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+button {
+    width: 4em;
+}
+
+form > div > input {
+    width: 7em;
+}
+
+@media print {
+    h2 {
+        margin: .1em !important;
+        font-size: 22pt !important;
+    }
+
+    form > div {
+        display: none !important;
+    }
+
+    fieldset {
+        border: none !important;
+        margin: 0 1em !important;
+    }
+
+    progress {
+        display: none !important;
+    }
+}

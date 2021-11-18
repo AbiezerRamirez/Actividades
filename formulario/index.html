@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Formulario</title>
 </head>
 <body>
@@ -52,6 +52,14 @@
             <div>
                 <label for="pass">Contraseña:</label>
                 <input type="password" name="pass" id="pass" required pattern="[\wñÑ.-]{8,}" title="Minimo 8 caracteres">
+            </div>
+            <div>
+                <label for="solicitud">Solicitud</label>
+                <input type="search" id="solicitud" name="solicitud" pattern="[mMsS][0-9]{3}" title="Debe contener una M o una S seguido de 3 numeros">
+            </div>
+            <div>
+                <label for="fechaHora">Fecha y Hora:</label>
+                <input type="datetime-local" name="fechaHora" id="fechaHora">
             </div>
         </fieldset>
         <fieldset>
