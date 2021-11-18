@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    margin: .5em;
+    font-size: 3em;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    padding: 1.5em;
+    text-align: center;
+    min-width: min-content;
+    flex-grow: 1;
+    margin: 1em;
+    height: max-content;
+}
+
+fieldset div {
+    margin: 1em;
+}
+
+input {
+    padding: .3em;
+}
+
+fieldset:focus-within {
+    background-color: darkkhaki;
+}
+
+form > div {
+    text-align: center;
+    width: 100%;
+}

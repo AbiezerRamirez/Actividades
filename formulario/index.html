@@ -61,7 +61,7 @@
             </div>
             <div>
                 <label for="color">Color:</label>
-                <input type="color" name="color" id="color">
+                <input type="color" name="color" id="color" value="#00ff00">
             </div>
             <div>
                 <label for="rang">Elige un rango:</label>
@@ -70,10 +70,14 @@
             <div>
                 <label for="op">Opciones:</label>
                 <select name="op" id="opciones">
-                    <option value="1">Opcion 1</option>
-                    <option value="2">Opcion 2</option>
-                    <option value="3">Opcion 3</option>
-                    <option value="4">Opcion 4</option>
+                    <optgroup label="Grupo 1">
+                        <option value="1">Opcion 1</option>
+                        <option value="2">Opcion 2</option>
+                    </optgroup>
+                    <optgroup label="Grupo 2">
+                        <option value="3">Opcion 3</option>
+                        <option value="4">Opcion 4</option>
+                    </optgroup>
                 </select>
             </div>
         </fieldset>
@@ -84,13 +88,18 @@
                 <input type="url" name="url" id="url">
             </div>
             <div>
-                <textarea name="about" id="about" cols="30" rows="10">Acerca de ti</textarea>
+                <textarea name="about" id="about" cols="15" rows="5" placeholder="Acerca de ti..."></textarea>
             </div>
             <div>
-                <input type="checkbox" name="terms" id="terms">
+                <input type="checkbox" name="terms" id="terms" checked>
                 <label for="terms">Acepto los Terminos y Condiciones</label>
             </div>
         </fieldset>
+        <div>
+            <input type="image" src="" alt="Imagen">
+            <input type="submit">
+            <input type="reset">
+        </div>
     </form>
 </body>
 </html>
