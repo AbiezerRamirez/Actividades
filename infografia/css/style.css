@@ -1,11 +1,6 @@
-html {
-    /* font-size: 90%; */
-}
-
 * {
     padding: 0;
     margin: 0;
-    /* font-size: 1.5rem; */
 }
 
 /* CONTADOR */
@@ -17,7 +12,7 @@ body {
 
 h3::before {
     counter-increment: capitulo;
-    content: "Capitulo " counter(capitulo) ": ";
+    content: "Capítulo " counter(capitulo) ": ";
 }
 
 /* HEADER */
@@ -30,15 +25,85 @@ h2 {
     background-color: #D89359;
     font-size: calc(1vw + 1.5em);
     text-align: center;
-    margin-bottom: 1em;
     padding: 1em;
+}
+
+/* STYLES MENU */
+
+nav {
+    counter-reset: capituloMenu;
+    background-color: #cd2d31;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav > div a {
+    font-size: 3em;
+    color: #000;
+}
+
+nav > ul a {
+    color: #fff;
+    padding: .5em 66.6% .5em 0;
+}
+
+nav > ul li {
+    background-color: #222d;
+    padding: .5em;
+    margin: .2em;
+    width: 90%;
+}
+
+nav > ul a:focus {
+    color: #D89359;
+}
+
+
+nav li a::after {
+    counter-increment: capituloMenu;
+    content: counter(capituloMenu)"";
+}
+
+/* MENU DESPLEGABLE*/
+
+nav > ul {
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+nav:target ul {
+    height: min-content;
+}
+
+nav > div > a:last-of-type {
+    display: none;
+}
+
+nav:target > div > a:first-of-type {
+    display: none;
+}
+
+nav:target > div > a:last-of-type {
+    display: block;
 }
 
 /* MAIN */
 
 main {
     margin: .5em;
-    display: block;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 /* SECTIONS */
@@ -56,68 +121,138 @@ section {
     margin: 1em;
 }
 
-section:nth-child(odd) {
-    /* background-color: #5A9B9Bdd; */
+section:nth-of-type(odd) {
     background-color: #348e84dd;
 }
+/* background-color: #5A9B9Bdd; */
 
-section:nth-child(even) {
-    text-align: right;
-    /* background-color: #47AD47dd; */
+/* background-color: #47AD47dd; */
+section:nth-of-type(even) {
     background-color: #2ba825dd;
 }
 
-article {
+p {
     font-family: 'Zen Antique Soft', serif;
     font-size: .9em;
+    margin-top: 1em;
 }
+
+section ul {
+    text-align: left;
+    margin: 1em;
+    list-style-position: inside;
+}
+
+/* ICONOS */
+
+/* section + div {
+    background-color: #777a;
+    text-align: center;
+    width: 50%;
+    font-size: 5em;
+    padding: .2em;
+} */
 
 /* TABLET */
 
 @media screen and (min-width: 768px) {
-    body {
-        /* background-image: none; */
-        /* background-color: #ccc; */
+
+    /* MENU-TABLET */
+
+    nav > ul {
+        /* display: flex; */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
 
+    nav > ul > li {
+        width: 45%;
+    }
+
+    nav > ul a {
+        padding: .5em 38%;
+    }
+
+    /* MAIN-TABLET */
+    
     main {
-        /* text-align: center; */
-        margin: .5em;
         display: flex;
         flex-direction: column;
+        /* flex-wrap: wrap; */
     }
-
+    
     section {
         text-align: center;
         padding: .5em;
         margin: 1em;
         width: 70%;
+        /* flex-shrink: 1; */
     }
     
-    section:nth-child(odd) {
+    section:nth-of-type(odd) {
         align-self: flex-start;
     }
     
-    section:nth-child(even) {
-        text-align: center;
+    section:nth-of-type(even) {
         align-self: flex-end;
     }
+
+    /* section + div { */
+        /* width: min-content; */
+        /* flex-shrink: 2; */
+    /* } */
 }
 
 /* DESKTOP */
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 800px) {
     main {
         display: grid;
-        grid-template-columns: repeat(2, 48%);
-        column-gap: 4%;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3%;
     }
-
+    
     section {
-        justify-self: center;
         width: auto;
     }
 
+    section:nth-of-type(4n+1), section:nth-of-type(4n) {
+        background-color: #348e84dd;
+        align-self: center;
+    }
+    
+    section:nth-of-type(4n+2), section:nth-of-type(4n+3) {
+        background-color: #2ba825dd;
+        align-self: center;
+    }
+
+    
+/* nav {
+    margin-bottom: 1em;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: #aaaa;
+    justify-content: center;
+}
+
+nav li {
+    padding: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+} */
+    
+nav li:not(nav li:last-of-type) {
+    /* border-right: .2em solid #000; */
+}
 }
 
 
