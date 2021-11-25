@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 1 2021</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      window.onload = function () {
+        document
+          .getElementById("cerrar")
+          .addEventListener("click", function () {
+            document.getElementById("cookies").remove();
+          });
+      };
+    </script>
+ 
+
+  </head>
+  <body>
+    <header>
+      <h1>
+        Abiezer Josue Ramirez Ceballos
+        <!-- Aquí val el nombre del alumno -->
+      </h1>
+    </header>
+    <nav>
+      <ul class="nivel1">
+        <li><a href="#">Inicio </a></li>
+        <li>
+          <a href="#">Sobre nosotros </a>
+        </li>
+        <li><a href="#">Contacto</a></li>
+
+        <li id="buscar">
+          <form>
+            <label for="search">Buscar: </label
+            ><input type="search" id="search" />
+          </form>
+        </li>
+      </ul>
+    </nav>
+    <div id="contenido">
+      <section id="principal">
+        <h2>Artículo principal</h2>
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa.
+          </p>
+
+          <p>
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus.
+          </p>
+
+          <p>
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim.
+          </p>
+
+          <p>
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+          </p>
+
+          <p>
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+            tellus.
+          </p>
+
+          <p>
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+          </p>
+
+          <p>
+            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+            Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi.
+          </p>
+
+          <p>
+            Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+            condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem
+            neque sed ipsum.
+          </p>
+
+          <p>
+            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+            Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+            libero venenatis faucibus.
+          </p>
+
+          <p>
+            Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+            Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
+            magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+            nunc,
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor.
+          </p>
+
+          <p>Aenean massa.</p>
+
+          <p>
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus.
+          </p>
+
+          <p>
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim.
+          </p>
+
+          <p>
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+          </p>
+
+          <p>
+            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            Nullam dictum felis eu pede mollis pretium.
+          </p>
+
+          <p>
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+            Aenean vulputate eleifend tellus.
+          </p>
+
+          <p>
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          </p>
+
+          <p>
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            Phasellus viverra nulla ut metus varius laoreet.
+          </p>
+
+          <p>
+            Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+            Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+            Maecenas tempus,
+          </p>
+        </article>
+      </section>
+      <section id="formulario">
+        <h2>
+          <span class="icono">
+           
+            <!-- Aquí va el icono del lapiz --></span
+          >Formulario
+        </h2>
+        <form>
+          <fieldset>
+            <legend>Datos</legend>
+            <div>
+              <label for="nick">Nick</label><br>
+              <input type="text" id="nick" name="nick" required pattern="[a-zA-ZñÑ][a-zA-ZñÑ0-9]{5,}">
+            </div>
+            <div>
+              <label for="correo">Correo</label><br>
+              <input type="email" name="correo" id="correo" required>
+            </div>
+            <div>
+              <label for="pass">Contraseña</label><br>
+              <input type="password" name="pass" id="pass" required pattern="[\w]{8,}">
+            </div>
+            <div>
+              <label for="url">URL</label><br>
+              <input type="url" name="url" id="url">
+            </div>
+            <div>
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Limpiar">
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <aside id="enlaces">
+      <h2>
+        <span class="icono">
+          
+          <!-- Aquí va el icono lista --></span
+        >Enlaces
+      </h2>
+      <ul class="enlaces">
+        <li>
+          <a href="./documentos/documento1.pdf">Documento1</a>
+          <div class="ayuda">Ayuda sobre el enlace 1</div>
+        </li>
+        <li>
+          <a href="./documentos/documento2.pdf">Documento2</a>
+          <div class="ayuda">Ayuda sobre el enlace 2</div>
+        </li>
+        <li>
+          <a href="./documentos/documento3.docx">Documento3</a>
+          <div class="ayuda">Ayuda sobre el enlace 3</div>
+        </li>
+        <li>
+          <a href="./documentos/documento4.doc">Documento4</a>
+          <div class="ayuda">Ayuda sobre el enlace 4</div>
+        </li>
+        <li>
+          <a href="./documentos/documento5.pdf">Documento5</a>
+          <div class="ayuda">Ayuda sobre el enlace 5</div>
+        </li>
+        <li>
+          <a href="./documentos/documento6.pdf">Documento6</a>
+          <div class="ayuda">Ayuda sobre el enlace 6</div>
+        </li>
+        <li>
+          <a href="./documentos/documento7.pdf">Documento7</a>
+          <div class="ayuda">Ayuda sobre el enlace 7</div>
+        </li>
+      </ul>
+    </aside>
+    <footer>
+      <time datetime="2021-11-25">25/11/2021</time>Examen práctico
+    </footer>
+    <section id="cookies">
+      <span id="cerrar" class="icono">
+
+        <!-- Aquí va el icono de cerrar -->
+      </span>
+      <p>
+        Esta página web utiliza servicios de terceros para recopilar información
+        con fines estadísticos y de uso de la web. Se usan cookies de
+        DoubleClick para mejorar la publicidad que se incluye en el sitio web.
+        Son utilizadas para orientar la publicidad según el contenido que es
+        relevante para un usuario, mejorando así la calidad de experiencia en el
+        uso del mismo.
+      </p>
+      <p>
+        En concreto, usamos los servicios de Google Adsense y de Google
+        Analytics para nuestras estadísticas y publicidad. Algunas cookies son
+        esenciales para el funcionamiento del sitio, por ejemplo el buscador
+        incorporado.
+      </p>
+      <p>
+        Nuestro sitio incluye otras funcionalidades proporcionadas por terceros.
+        Usted puede fácilmente compartir el contenido en redes sociales como
+        Facebook, Twitter o Google +, con los botones que hemos incluido a tal
+        efecto.
+      </p>
+    </section>
+  </body>
+</html>
