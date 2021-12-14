@@ -1,0 +1,39 @@
+html {
+    font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 5em;
+}
+
+table {
+    border: 4px double #999;
+}
+
+tr , td, th {
+    border: 1px solid #999;
+    text-align: center;
+}
+
+th, tr, td {
+    padding: .5em 2em;
+}
+
+thead th, tfoot td {
+    background-color: rgb(177, 30, 30);
+    color: #fff;
+}
+
+tbody td {
+    background-color: rgb(185, 98, 223);
+}
+
+tbody tr:nth-last-of-type(even) td {
+    background-color: rgb(69, 39, 75);
+    color: #fff;
+}
