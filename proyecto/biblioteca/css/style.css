@@ -1,0 +1,233 @@
+html {
+    font-family: 'Kurenaido', sans-serif;
+    font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 60 */
+
+.color-primary-0 { color: #96EF0F }	/* Main Primary color */
+.color-primary-1 { color: #BCF466 }
+.color-primary-2 { color: #A9F13B }
+.color-primary-3 { color: #80D300 }
+.color-primary-4 { color: #64A400 }
+
+.color-secondary-1-0 { color: #1092B0 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #57B4C9 }
+.color-secondary-1-2 { color: #329FB9 }
+.color-secondary-1-3 { color: #03748E }
+.color-secondary-1-4 { color: #025A6F }
+
+.color-secondary-2-0 { color: #FFDC10 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #FFE96A }
+.color-secondary-2-2 { color: #FFE33F }
+.color-secondary-2-3 { color: #E5C400 }
+.color-secondary-2-4 { color: #B39900 }
+
+.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
+.color-complement-1 { color: #E861A0 }
+.color-complement-2 { color: #E13887 }
+.color-complement-3 { color: #BF005A }
+.color-complement-4 { color: #950046 }
+
+/* As hex codes 70*/
+
+.color-primary-0 { color: #96EF0F }	/* Main Primary color */
+.color-primary-1 { color: #BCF466 }
+.color-primary-2 { color: #A9F13B }
+.color-primary-3 { color: #80D300 }
+.color-primary-4 { color: #64A400 }
+
+.color-secondary-1-0 { color: #1670B5 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #5D9CCD }
+.color-secondary-1-2 { color: #3884BE }
+.color-secondary-1-3 { color: #085793 }
+.color-secondary-1-4 { color: #064373 }
+
+.color-secondary-2-0 { color: #FFD010 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #FFE26A }
+.color-secondary-2-2 { color: #FFD93F }
+.color-secondary-2-3 { color: #E5B800 }
+.color-secondary-2-4 { color: #B38F00 }
+
+.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
+.color-complement-1 { color: #E861A0 }
+.color-complement-2 { color: #E13887 }
+.color-complement-3 { color: #BF005A }
+.color-complement-4 { color: #950046 }
+
+:root {
+    /* As hex codes */
+
+
+    --main-color: #96EF0F;
+    --black: #141518;
+    --white: #ffe;
+    --white2: #F7F7F7;
+    --white3: #F0F0F0;
+    --gray: rgb(170, 170, 170);
+    --blue: #5D9CCD;
+
+    /* --main-color: #8f343e; */
+    /* --black: #111; */
+}
+
+body {
+    background-color: var(--white2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5em 3em 1fr 4em;
+    grid-template-areas: 
+        "head"
+        "nav"
+        "main"
+        "footer";
+}
+
+/* HEADER */
+
+header {
+    grid-area: head;
+    background-color: var(--white3);
+    overflow: hidden;
+}
+
+h1 {
+    margin: .7em;
+}
+
+h2 {
+    background-color: var(--blue);
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+    text-align: center;
+    padding: .5em;
+    margin: .5em;
+}
+
+h3 {
+    margin: 1em;
+}
+
+nav {
+    top: 0;
+    height: 100%;
+    display: flex;
+    grid-area: nav;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 0 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul a {
+    color: var(--black);
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav ul a:hover {
+    color: var(--white); 
+    background-color: var(--black);
+}
+
+nav > div > label {
+    display: inline-block;
+    vertical-align: middle;
+} 
+
+nav > div > input {
+    padding: .2em;
+}
+
+nav > div > input::placeholder {
+    color: var(--gray);
+} 
+
+.perfil {
+    background-color: var(--white);
+    padding: .4em;
+    border-radius: 50px;
+}
+
+/* MAIN */
+
+main {
+    grid-area: main;
+    margin: 1.5em;
+}
+
+main article img {
+    width: 30vw;
+    height: 15vw;
+    float: left;
+    margin-right: .5em;
+}
+
+main section:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+main section:first-of-type a {
+    text-decoration: none;
+} 
+
+section {
+    clear: left;
+}
+
+main article {
+    margin: 1em;
+}
+
+main article a {
+    color: #000;
+    text-decoration: none;
+}
+
+main article::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--black);
+    grid-area: footer;
+    text-align: center;
+    /* display: flex; */
+}
+
+footer ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+/* ENLACES */
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer a:hover {
+    position: relative;
+    color: var(--gray);
+    left: 7%;
+}
