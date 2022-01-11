@@ -35,8 +35,8 @@ section > article {
     margin: 2em;
 }
 
-picture {
-    margin: 2em;
+img {
+    margin: 1em;
 }
 
 @media screen and (min-width: 580px) {
@@ -50,6 +50,9 @@ picture {
     picture {
         justify-self: center;
         align-self: center;
+    }
+    
+    img {
         margin: .2em;
     }
 
@@ -67,7 +70,7 @@ picture {
         display: flex;
     }
 
-    picture {
+    img {
         margin: 1.5em;
     }
 
