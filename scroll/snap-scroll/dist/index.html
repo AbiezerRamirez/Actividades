@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - snap-scroll</title>
+    <style>
+        nav {
+            display: flex;
+            margin: 2em;
+        }
+        nav a {
+            margin: .5em;
+        }
+
+        section {
+            margin: 2em;
+            background-color: #777;
+            padding: 1em;
+            width: 10em;
+            overflow:scroll;
+        }
+
+        article {
+            /* display: inline-block; */
+            width: 10em;
+            height: 15em;
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: center; */
+        }
+
+        article:nth-of-type(2n) {
+            background-color: aquamarine;
+        }
+
+        article:nth-of-type(2n+1) {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+    <nav>
+        <a href="#page-1">1</a>
+        <a href="#page-2">2</a>
+        <a href="#page-3">3</a>
+        <a href="#page-4">4</a>
+        <a href="#page-5">5</a>
+        <a href="#page-6">6</a>
+        <a href="#page-7">7</a>
+        <a href="#page-8">8</a>
+        <a href="#page-9">9</a>        
+    </nav>
+    <section id="section1">
+        <article id="page-1">
+            1
+        </article>
+        <article id="page-2">
+            2
+        </article>
+        <article id="page-3">
+            3
+        </article>
+        <article id="page-4">
+            4
+        </article>
+        <article id="page-5">
+            5
+        </article>
+        <article id="page-6">
+            6
+        </article>
+        <article id="page-7">
+            7
+        </article>
+        <article id="page-8">
+            8
+        </article>
+        <article id="page-9">
+            9
+        </article>
+    </section>
+    <nav>
+        <a href="#page-21">1</a>
+        <a href="#page-22">2</a>
+        <a href="#page-23">3</a>
+        <a href="#page-24">4</a>
+        <a href="#page-25">5</a>
+        <a href="#page-26">6</a>
+        <a href="#page-27">7</a>
+        <a href="#page-28">8</a>
+        <a href="#page-29">9</a>        
+    </nav>
+    <section id="section2">
+        <article id="page-21">
+            1
+        </article>
+        <article id="page-22">
+            2
+        </article>
+        <article id="page-23">
+            3
+        </article>
+        <article id="page-24">
+            4
+        </article>
+        <article id="page-25">
+            5
+        </article>
+        <article id="page-26">
+            6
+        </article>
+        <article id="page-27">
+            7
+        </article>
+        <article id="page-28">
+            8
+        </article>
+        <article id="page-29">
+            9
+        </article>
+    </section>
+<!-- partial -->
+  
+</body>
+</html>
