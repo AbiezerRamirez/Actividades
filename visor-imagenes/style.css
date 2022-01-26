@@ -1,0 +1,20 @@
+iframe {
+    border: none;
+    display: block;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+    /* text-align: center; */
+    /* ove04 */
+    /* background-image: ; */
+    /* background-position: center; */
+    /* align: middle; */
+}
+
+a > img {
+    width: 10em;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 10px 10px 50px 10px;
+    box-shadow: 10px 10px 30px #000c;
+}
