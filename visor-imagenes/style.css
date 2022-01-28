@@ -3,42 +3,66 @@
     padding: 0;
 }
 
-h1 {
-    width: 100%;
-    text-align: center;
-    margin: 1em;
-}
-
 body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+h1 {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.5em;
+    color: transparent;
+    background: url('img/bg-text.jpg') repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 iframe {
     border: none;
+    margin: 1em;
 }
 
-div {
-    width: 100%;
-    text-align: center;
-}
-
-a > img {
-    width: 10em;
+a {
     background-color: #fff;
     border: 1px solid #999;
-    padding: 10px 10px 50px 10px;
+    padding: 10px 10px 30px 10px;
     box-shadow: 10px 10px 30px #000c;
-    transform: rotate(45deg);
-    /* animation: 5s; */
-    /* rotate: ; */
+    position: absolute;
 }
 
-img:hover {
+body > div {
+    flex-grow: 1;
+    position: relative;
+}
+
+div a:first-of-type {
+    transform: rotate(10deg);
+    left: 10%;
+}
+div a:nth-of-type(2) {
+    transform: rotate(-10deg);
+    left: 25%;
+}
+div a:nth-of-type(3) {
+    transform: rotate(5deg);
+    top: 15%;
+    left: 12%;
+}
+div a:nth-of-type(4) {
+    transform: rotate(-30deg);
+    top: 23%;
+    left: 12%;
+}
+div a:last-of-type {
+    transform: rotate(30deg);
+    top: 30%;
+    left: 10%;
+}
+
+div a:hover {
     transform: rotate(0);
     transition: 1s;
-    position: relative;
     z-index: 1;
 }
-
