@@ -1,6 +1,6 @@
 html {
-    font-family: 'Kurenaido', sans-serif;
-    font-size: 1rem;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 1.5rem;
 }
 
 * {
@@ -61,7 +61,7 @@ html {
 .color-complement-4 { color: #950046 }
 
 :root {
-    --main-color: #96EF0F;
+    --main-color: #A9F13B;
     --black: #141518;
     --white: #ffe;
     --white2: #F7F7F7;
@@ -70,9 +70,103 @@ html {
     --blue: #5D9CCD;
 }
 
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* MOBILE */
-    
+
+header > div {
+    display: flex;
+    padding: .3em;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-color);
+}
+
 nav {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+nav > ul {
+    display: none;
+}
+
+
+/* nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+/* nav ul { */
+    /* display: flex; */
+    /* padding: 1em; */
+/* } */
+
+/* nav a {
+    padding: 2em;
+} */
+
+ul {
+    list-style: none;
+}
+
+/* nav {
     top: 0;
     height: 100%;
     display: flex;
@@ -82,7 +176,7 @@ nav {
     justify-content: space-between;
     background-color: var(--main-color);
     padding: 0 1.5em;
-}
+} */
 
 /* TABLET */
 
@@ -94,7 +188,7 @@ nav {
 
 @media screen and (min-width: 992px) {
     
-    body {
+    /* body {
         background-color: var(--white2);
         display: grid;
         grid-template-columns: 1fr;
@@ -104,11 +198,11 @@ nav {
         "nav"
         "main"
         "footer";
-    }
+    } */
     
     /* HEADER */
     
-    header {
+    /* header {
         grid-area: head;
         background-color: var(--white3);
         overflow: hidden;
@@ -176,11 +270,11 @@ nav {
         background-color: var(--white);
         padding: .4em;
         border-radius: 50px;
-    }
+    } */
     
     /* MAIN */
     
-    main {
+    /* main {
         grid-area: main;
         margin: 1.5em;
     }
@@ -190,9 +284,9 @@ nav {
         height: 15vw;
         float: left;
         margin-right: .5em;
-    }
+    } */
     
-    main section:first-of-type {
+    /* main section:first-of-type {
         display: flex;
         justify-content: center;
     }
@@ -200,16 +294,16 @@ nav {
     main section:first-of-type img {
         width: 65vw;
         height: 35vw;
-    }
+    } */
     
-    main section:first-of-type a {
+    /* main section:first-of-type a {
         text-decoration: none;
-    } 
+    }  */
     
-    section {
+    /* section {
         clear: left;
-    }
-    
+    } */
+/*     
     main article {
         margin: 1em;
     }
@@ -223,15 +317,15 @@ nav {
         content: "";
         clear: both;
         display: table;
-    }
+    } */
     
     /* FOOTER */
-    
-    footer {
+
+/*  footer {
         background-color: var(--black);
         grid-area: footer;
         text-align: center;
-        /* display: flex; */
+        display: flex;
     }
     
     footer ul {
@@ -240,11 +334,11 @@ nav {
         align-items: center;
         justify-content: space-evenly;
         list-style: none;
-    }
+    } */
     
     /* ENLACES */
     
-    footer a {
+    /* footer a {
         text-decoration: none;
         color: var(--white);
     }
@@ -253,5 +347,5 @@ nav {
         position: relative;
         color: var(--gray);
         left: 7%;
-    }
+    } */
 }
