@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Zen+Kurenaido&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Inicio</title>
 </head>
 
@@ -30,11 +31,11 @@
         <a href="#">
             <h1>BIBLIOTECA</h1>
         </a>
-        <nav>
+        <nav id="navegacion">
             <!-- <p>Telefoto: 000 000 0000</p> -->
             <div class="material-icons">
                 <a href="#navegacion">menu</a>
-                <!-- <a href="#">expand_less</a> -->
+                <a href="#">expand_less</a>
             </div>
             <ul>
                 <li><a href="#">Noticias</a></li>
@@ -66,48 +67,59 @@
         <!-- Swiper -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide"><img src="./assets/img/rectangulo.jpg" alt="asdfas"></div>
+                <div class="swiper-slide"><img src="./assets/img/rectangulo.jpg" alt="asdfas"></div>
+                <div class="swiper-slide"><img src="./assets/img/rectangulo.jpg" alt="asdfas"></div>
+                <div class="swiper-slide"><img src="./assets/img/rectangulo.jpg" alt="asdfas"></div>
+                <div class="swiper-slide"><img src="./assets/img/rectangulo.jpg" alt="asdfas"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
-        <h2>Noticias</h2>
-                <article>
-                    <a href="#">
-                        <img src="assets/img/rectangulo.jpg" alt="">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                    </a>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="assets/img/rectangulo.jpg" alt="">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
-                    </a>
-                </article>
-            </section>
+        <section>
+            <h2>Noticias</h2>
+            <article>
+                <a href="#">
+                    <img src="assets/img/rectangulo.jpg" alt="">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                </a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+            </article>
+            <article>
+                <a href="#">
+                    <img src="assets/img/rectangulo.jpg" alt="">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                </a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eum modi accusamus temporibus
+                    quaerat commodi quasi dignissimos vero repellendus. Laudantium, eligendi facilis atque facere
+                    quaerat consequatur dolor. Excepturi, exercitationem hic!</p>
+            </article>
+        </section>
         <section>
             <h2>Actividades</h2>
             <article>
                 <a href="#">
                     <img src="assets/img/rectangulo.jpg" alt="">
                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio itaque aut est a sed doloribus vitae esse, ipsam rerum accusantium iusto asperiores corrupti quibusdam obcaecati sint dolore magni possimus.</p>
                 </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio itaque aut est a sed
+                    doloribus vitae esse, ipsam rerum accusantium iusto asperiores corrupti quibusdam obcaecati sint
+                    dolore magni possimus.</p>
             </article>
         </section>
     </main>
@@ -132,23 +144,42 @@
     </footer> -->
 
     <!-- Swiper JS -->
-    
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
     <!-- Initialize Swiper -->
     <script>
-        // var swiper = new Swiper(".mySwiper", {
+        //   var swiper = new Swiper(".mySwiper", {
         //     slidesPerView: 1,
         //     spaceBetween: 30,
         //     loop: true,
         //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
+        //       el: ".swiper-pagination",
+        //       clickable: true,
         //     },
         //     navigation: {
-        //         nextEl: ".swiper-button-next",
-        //         prevEl: ".swiper-button-prev",
+        //       nextEl: ".swiper-button-next",
+        //       prevEl: ".swiper-button-prev",
         //     },
+        //   });
+        // document.querySelector('a[href="#navegacion"]').addEventListener('click', e => {
+        // e.preventDefault();
+        // console.log('hola');
         // });
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
     </script>
 </body>
 
