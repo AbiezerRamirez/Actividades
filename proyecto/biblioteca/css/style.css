@@ -142,9 +142,9 @@ background: linear-gradient(0deg, rgba(45,154,253,1) 0%, rgba(255,255,255,1) 100
     text-align: center;
     border-style: solid;
     border-color: var(--black);
-    background-color: var(--azul);
-    background: rgb(21,193,198);
-background: linear-gradient(0deg, rgba(21,193,198,1) 0%, rgba(255,255,255,1) 100%);
+    /* background-color: var(--azul); */
+    /* background: rgb(21,193,198); */
+/* background: linear-gradient(0deg, rgba(21,193,198,1) 0%, rgba(255,255,255,1) 100%); */
 }
 
 h3 {
@@ -284,6 +284,16 @@ nav:target > div > a:last-of-type {
     height: 100%;
     object-fit: cover;
   }
+
+/* CAMBIAR COLORES SWIPER */
+
+  /* .swiper-button-prev{
+    --swiper-theme-color:red;
+    --swiper-navigation-size:20px;
+} */
+
+
+
 /*   
   .swiper {
   } */
@@ -376,12 +386,18 @@ footer > ul:last-of-type {
 /* DESKTOP */
 
 @media screen and (min-width: 992px) {
-    img {
-        height: 32em;
-        width: 80% !important;
-
+    /* main article img { */
+        /* height: 32em; */
+        /* width: 60%; */
+        /* display: flex; */
+        /* justify-content: center; */
         /* margin 1em; */
+    /* } */
+
+    main article {
+        margin: 0 20%;
     }
+
     nav > div {
         display: none;
     }
