@@ -132,6 +132,8 @@ h1 {
 }
 
 h2 {
+    /* background: rgb(45,154,253);
+background: linear-gradient(0deg, rgba(45,154,253,1) 0%, rgba(255,255,255,1) 100%); */
     font-size: 2rem;
     /* margin: .1em 0 1em; */
     padding: .2em;
@@ -141,6 +143,8 @@ h2 {
     border-style: solid;
     border-color: var(--black);
     background-color: var(--azul);
+    background: rgb(21,193,198);
+background: linear-gradient(0deg, rgba(21,193,198,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 h3 {
@@ -181,6 +185,10 @@ header > div.material-icons {
     align-items: center;
     justify-content: center;
     background-color: var(--gris);
+}
+
+#search::-webkit-search-cancel-button{
+    display: none;
 }
 
 header > div > input {
