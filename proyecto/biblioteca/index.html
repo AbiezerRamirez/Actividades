@@ -23,54 +23,31 @@
 
 <body>
     <header>
-        <!-- <div> -->
-        <!-- <div> -->
-        <div class="material-icons">
-            <!-- <span>facebook</span> -->
-            <!-- <span></span> -->
-            <!-- Redes sociales -->
+        <div>
+            <div>
+                <span class="icon-facebook"></span>
+                <span class="icon-instagram"></span>
+                <span class="icon-twitter"></span>
+            </div>
             <input type="search" id="search" placeholder="Buscar">
-            <label for="search">search</label>
+            <label for="search" class="icon-search"></label>
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
-        <!-- <div> -->
         <div>
             <h1><a href="#">BIBLIOTECA</a></h1>
-    
+
             <nav id="navegacion">
-                <!-- <p>Telefoto: 000 000 0000</p> -->
                 <div>
                     <a href="#navegacion" class="icon-menu"></a>
                     <a href="#" class="icon-expand_less"></a>
                 </div>
                 <ul>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Actividades</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#actividades">Actividades</a></li>
                     <li><a href="#">Libros</a></li>
                 </ul>
-                <!-- <a href="profile.html" class="perfil">
-                        <img src="assets/img/user-gf89d4c91c_640.png" alt="perfil-img" width="30">
-                    </a> -->
             </nav>
         </div>
-        <!-- </div> -->
     </header>
-    <!-- <nav>
-        <a href="#">LOGO</a>
-        <ul>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="#">Actividades</a></li>
-            <li><a href="#">Libros</a></li>
-        </ul>
-        <div class="material-icons">
-            <input type="search" id="search" placeholder="Buscar">
-            <label for="search">search</label>
-        </div>
-        <a href="profile.html" class="perfil">
-            <img src="assets/img/user-gf89d4c91c_640.png" alt="perfil-img" width="30">
-        </a>
-    </nav> -->
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -85,7 +62,7 @@
         <div class="swiper-pagination"></div>
     </div>
     <main>
-        <section>
+        <section id="noticias">
             <h2>Noticias</h2>
             <article>
                 <a href="#">
@@ -118,7 +95,7 @@
                     quaerat consequatur dolor. Excepturi, exercitationem hic!</p> -->
             </article>
         </section>
-        <section>
+        <section id="actividades">
             <h2>Actividades</h2>
             <article>
                 <a href="#">
@@ -144,34 +121,13 @@
             <li><span class="icon-instagram"></span></li>
             <li><span class="icon-twitter"></span></li>
         </ul>
+        <span>Telefoto: 000 000 0000</span>
+
         <!-- </div> -->
 
     </footer>
-    <!-- <aside>
-        <h2>Ultimas Adquisiciones</h2>
-        <article>
-            <img src="assets/libro.jpg" alt="libro img">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </article>
-    </aside> -->
-    <!-- <footer> -->
-    <!-- <h3>FOOTER</h3> -->
-    <!-- <ul>
-            <li><a href="#">Mapa el Sitio</a></li>
-            <li><a href="#">Accesibilidad</a></li>
-            <li><a href="#">Guia de Estilos</a></li>
-        </ul>
-    </footer> -->
-
     <!-- Swiper JS -->
-
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-    <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,

@@ -48,11 +48,8 @@ table {
 html, input {
     font-family: 'Nunito Sans', sans-serif;
 }
-
-h1 {
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -65,8 +62,9 @@ h1 {
     --blue: #5D9CCD;
     --gris: #4A4E55;
     --gris-oscuro: #31353D;
+    /* --gris-claro: #013766; */
     --blanco: #fff;
-    --azul: #15C1C6;
+    --azul: #b62247;
 }
 
 a {
@@ -74,14 +72,21 @@ a {
 }
 
 h1 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
     font-size: 3rem;
     padding: .5em;
 }
 
 h2 {
-    font-size: 2rem;
-    padding: .2em;
+    font-size: 2.5rem;
     text-align: center;
+    padding: .5em 0;
+    font-family: 'Zen Kurenaido', sans-serif;
+    /* color: var(--azul); */
+    /* background-color: var(--gris-claro); */
+    /* border-top: 3px solid var(--azul); */
+    border-bottom: 3px solid var(--azul);
 }
 
 h3 {
@@ -94,12 +99,16 @@ h3 {
 
 /* HEADER */
 
-header > div.material-icons {
+header > div:first-of-type {
     display: flex;
-    padding: .3em;
+    padding: .3em 1em;
     align-items: center;
     justify-content: center;
     background-color: var(--gris);
+    font-size: 1.5rem;
+}
+header > div:first-of-type > div {
+    display: none;
 }
 
 #search::-webkit-search-cancel-button{
@@ -114,6 +123,12 @@ header > div:first-of-type > input {
     background-color: var(--gris);
     color: var(--blanco);
     font-weight: bold;
+    font-size: 1rem;
+}
+
+header > div:first-of-type > label {
+    color: var(--azul);
+    cursor: pointer;
 }
 
 header > div:first-of-type > input:focus, header > div:first-of-type > input:active{
@@ -143,6 +158,13 @@ nav > ul {
 
 nav ul a {
     display: block;
+    padding: 1em 0;
+}
+
+nav ul a:hover, nav ul a:active, nav ul a:focus {
+    background-color: var(--azul);
+    color: var(--blanco);
+    transition: all .5s ease;
 }
 
 nav:target ul {
@@ -195,27 +217,47 @@ nav:target > div > a:last-of-type {
 
 /* CAMBIAR COLORES SWIPER */
 
-  /* .swiper-button-prev{
-    --swiper-theme-color:red;
-    --swiper-navigation-size:20px;
-} */
+  .swiper-button-prev, .swiper-button-next  {
+      --swiper-theme-color: var(--blanco);
+      --swiper-navigation-size: 30px;
+      background-color: var(--azul);
+      padding: 1em;
+      border-radius: 1000px;
+    }
+
+  .swiper-pagination {
+      /* color: var(--azul); */
+    --swiper-theme-color: var(--azul);
+  }
+    /* border-radius: 5px; */
+
 
 
 /* MAIN */
 
-p {
-    line-height: 1.2rem;
-    margin: 0 1em;
+main article {
+    padding: 1em;
+}
+
+main article:not(article:last-child) {
+    border-bottom: 1px solid var(--black);
 }
 
 main article img {
     width: 100%;
 }
 
+p {
+    line-height: 1.2rem;
+    padding: .5em 1em;
+}
+
 /* FOOTER */
 
 footer {
     background-color: var(--gris-oscuro);
+    text-align: center;
+    padding: 1em;
 }
 
 footer, footer a {
@@ -226,6 +268,7 @@ footer > ul {
     display: flex;
     flex-wrap: wrap;
 }
+
 footer > ul li {
     padding: 1em 1em;
 }
@@ -240,13 +283,32 @@ footer > ul:last-of-type {
 /* TABLET */
 
 @media screen and (min-width: 576px) {
+    header > div:first-of-type {
+        background-color: var(--gris-oscuro);
+    }
     
+    header > div:first-of-type > div {
+        display: block;
+        flex-grow: 1;
+    }
+    
+    header > div:first-of-type > input {
+        flex-grow: 0;
+    }
+    
+    header > div:first-of-type > div > span {
+        padding: .5em;
+        /* font-size: .4rem; */
+        background-color: var(--azul);
+        border-radius: 30px;
+        color: var(--blanco);
+    }
 }
 
 /* DESKTOP */
 
-@media screen and (min-width: 992px) {
 
+@media screen and (min-width: 992px) {
     header > div:last-of-type {
         display: flex;
         justify-content: space-evenly;
@@ -262,17 +324,17 @@ footer > ul:last-of-type {
         height: auto;
     }
     
-    nav a {
+    nav ul a {
         padding: 3em 1em;
     }
 
-    nav a:hover {
-        background-color: var(--azul);
+    main {
+        margin: 0 10vw;
+        padding: 0 3em;
     }
 
-    main {
-        margin: 0 15vw;
-        padding: 0 3em;
+    main article {
+        padding: 2em;
     }
 }
 
@@ -329,3 +391,4 @@ footer > ul:last-of-type {
 .color-complement-4 { color: #950046 }
 /* #4A4E55 */
 /* #31353D */
+/* #15C1C6 */
