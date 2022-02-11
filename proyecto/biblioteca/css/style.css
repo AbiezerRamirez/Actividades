@@ -23,9 +23,10 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
+    background: #ffffff url("../assets/img/books.jpg") repeat-y fixed;
 	line-height: 1;
 }
 ol, ul {
@@ -44,73 +45,16 @@ table {
 	border-spacing: 0;
 }
 
-
-
 html, input {
     font-family: 'Nunito Sans', sans-serif;
-    /* background-image: url('./assets/img/books.jpg');
-    background-color: #fff; */
-    /* font-family: 'Source Serif 4', sans-serif; */
 }
 
 h1 {
     font-family: 'Zen Kurenaido', sans-serif;
     font-size: 1.5rem;
+    text-align: center;
 }
 
-/* 60 */
-
-.color-primary-0 { color: #96EF0F }	/* Main Primary color */
-.color-primary-1 { color: #BCF466 }
-.color-primary-2 { color: #A9F13B }
-.color-primary-3 { color: #80D300 }
-.color-primary-4 { color: #64A400 }
-
-.color-secondary-1-0 { color: #1092B0 }	/* Main Secondary color (1) */
-.color-secondary-1-1 { color: #57B4C9 }
-.color-secondary-1-2 { color: #329FB9 }
-.color-secondary-1-3 { color: #03748E }
-.color-secondary-1-4 { color: #025A6F }
-
-.color-secondary-2-0 { color: #FFDC10 }	/* Main Secondary color (2) */
-.color-secondary-2-1 { color: #FFE96A }
-.color-secondary-2-2 { color: #FFE33F }
-.color-secondary-2-3 { color: #E5C400 }
-.color-secondary-2-4 { color: #B39900 }
-
-.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
-.color-complement-1 { color: #E861A0 }
-.color-complement-2 { color: #E13887 }
-.color-complement-3 { color: #BF005A }
-.color-complement-4 { color: #950046 }
-
-/* As hex codes 70*/
-
-.color-primary-0 { color: #96EF0F }	/* Main Primary color */
-.color-primary-1 { color: #BCF466 }
-.color-primary-2 { color: #A9F13B }
-.color-primary-3 { color: #80D300 }
-.color-primary-4 { color: #64A400 }
-
-.color-secondary-1-0 { color: #1670B5 }	/* Main Secondary color (1) */
-.color-secondary-1-1 { color: #5D9CCD }
-.color-secondary-1-2 { color: #3884BE }
-.color-secondary-1-3 { color: #085793 }
-.color-secondary-1-4 { color: #064373 }
-
-.color-secondary-2-0 { color: #FFD010 }	/* Main Secondary color (2) */
-.color-secondary-2-1 { color: #FFE26A }
-.color-secondary-2-2 { color: #FFD93F }
-.color-secondary-2-3 { color: #E5B800 }
-.color-secondary-2-4 { color: #B38F00 }
-
-.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
-.color-complement-1 { color: #E861A0 }
-.color-complement-2 { color: #E13887 }
-.color-complement-3 { color: #BF005A }
-.color-complement-4 { color: #950046 }
-/* #4A4E55 */
-/* #31353D */
 :root {
     --main-color: #A9F13B;
     --black: #141518;
@@ -131,23 +75,13 @@ a {
 
 h1 {
     font-size: 3rem;
-    /* font-family: 'Source Serif 4', sans-serif;; */
+    padding: .5em;
 }
 
 h2 {
-    /* background: rgb(45,154,253);
-background: linear-gradient(0deg, rgba(45,154,253,1) 0%, rgba(255,255,255,1) 100%); */
     font-size: 2rem;
-    /* margin: .1em 0 1em; */
     padding: .2em;
-    /* border-top: 2px; */
-    /* border-bottom: 2px; */
     text-align: center;
-    /* border-style: solid; */
-    /* border-color: var(--black); */
-    /* background-color: var(--azul); */
-    /* background: rgb(21,193,198); */
-/* background: linear-gradient(0deg, rgba(21,193,198,1) 0%, rgba(255,255,255,1) 100%); */
 }
 
 h3 {
@@ -155,28 +89,6 @@ h3 {
     font-weight: bold;
     margin: .5em .3em;
 }
-
-main article img {
-    width: 100%;
-    /* padding: 1em; */
-    /* margin: 1em; */
-}
-
-/* SWIPER */
-/* html,
-body {
-  position: relative;
-  height: 100%;
-} */
-
-/* body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-} */
 
 /* MOBILE */
 
@@ -194,7 +106,7 @@ header > div.material-icons {
     display: none;
 }
 
-header > div > input {
+header > div:first-of-type > input {
     flex-grow: 1;
     padding: .5em;
     margin: 0 1.5em;
@@ -203,13 +115,17 @@ header > div > input {
     color: var(--blanco);
     font-weight: bold;
 }
-header > div > input:focus, header > div > input:active{
+
+header > div:first-of-type > input:focus, header > div:first-of-type > input:active{
     outline: none;
 }
 
-header > a {
-    text-align: center;
-    margin: 1em;
+header a {
+    color: var(--black);
+}
+
+header > div:last-of-type, main {
+    background-color: var(--white3);
 }
 
 nav {
@@ -217,12 +133,16 @@ nav {
 }
 
 nav > div {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 nav > ul {
     height: 0;
     overflow: hidden;
+}
+
+nav ul a {
+    display: block;
 }
 
 nav:target ul {
@@ -285,11 +205,11 @@ nav:target > div > a:last-of-type {
 
 p {
     line-height: 1.2rem;
-    margin: .5em;
+    margin: 0 1em;
 }
 
-section:first-of-type {
-    margin-top: .2em;
+main article img {
+    width: 100%;
 }
 
 /* FOOTER */
@@ -300,13 +220,11 @@ footer {
 
 footer, footer a {
     color: var(--blanco);
-    /* font-size: .8rem; */
 }
 
 footer > ul {
     display: flex;
     flex-wrap: wrap;
-    /* margin: 1em; */
 }
 footer > ul li {
     padding: 1em 1em;
@@ -314,10 +232,8 @@ footer > ul li {
 
 footer > ul:first-of-type {
     justify-content: space-around;
-    /* display: flex; */
 }
 footer > ul:last-of-type {
-    /* font-size: 1rem; */
     justify-content: center;
 }
 
@@ -330,40 +246,86 @@ footer > ul:last-of-type {
 /* DESKTOP */
 
 @media screen and (min-width: 992px) {
-    /* main article img { */
-        /* height: 32em; */
-        /* width: 60%; */
-        /* display: flex; */
-        /* justify-content: center; */
-        /* margin 1em; */
-    /* } */
 
-    /* body {
-        height: 100vh !important;
-    } */
-
-    body {
-        background: #ffffff url("../assets/img/books.jpg") repeat-y;
-    }
-    
-    main article {
-        margin: 0 20%;
+    header > div:last-of-type {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     nav > div {
         display: none;
     }
-
+    
     nav > ul {
         display: flex;
         height: auto;
-        justify-content: center;
+    }
+    
+    nav a {
+        padding: 3em 1em;
     }
 
-    nav a, nav li {
-        padding: 1em;
-    }
     nav a:hover {
-        background-color: #141518;
+        background-color: var(--azul);
+    }
+
+    main {
+        margin: 0 15vw;
+        padding: 0 3em;
     }
 }
+
+/* 60 */
+
+.color-primary-0 { color: #96EF0F }	/* Main Primary color */
+.color-primary-1 { color: #BCF466 }
+.color-primary-2 { color: #A9F13B }
+.color-primary-3 { color: #80D300 }
+.color-primary-4 { color: #64A400 }
+
+.color-secondary-1-0 { color: #1092B0 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #57B4C9 }
+.color-secondary-1-2 { color: #329FB9 }
+.color-secondary-1-3 { color: #03748E }
+.color-secondary-1-4 { color: #025A6F }
+
+.color-secondary-2-0 { color: #FFDC10 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #FFE96A }
+.color-secondary-2-2 { color: #FFE33F }
+.color-secondary-2-3 { color: #E5C400 }
+.color-secondary-2-4 { color: #B39900 }
+
+.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
+.color-complement-1 { color: #E861A0 }
+.color-complement-2 { color: #E13887 }
+.color-complement-3 { color: #BF005A }
+.color-complement-4 { color: #950046 }
+
+/* As hex codes 70*/
+
+.color-primary-0 { color: #96EF0F }	/* Main Primary color */
+.color-primary-1 { color: #BCF466 }
+.color-primary-2 { color: #A9F13B }
+.color-primary-3 { color: #80D300 }
+.color-primary-4 { color: #64A400 }
+
+.color-secondary-1-0 { color: #1670B5 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #5D9CCD }
+.color-secondary-1-2 { color: #3884BE }
+.color-secondary-1-3 { color: #085793 }
+.color-secondary-1-4 { color: #064373 }
+
+.color-secondary-2-0 { color: #FFD010 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #FFE26A }
+.color-secondary-2-2 { color: #FFD93F }
+.color-secondary-2-3 { color: #E5B800 }
+.color-secondary-2-4 { color: #B38F00 }
+
+.color-complement-0 { color: #DD0E70 }	/* Main Complement color */
+.color-complement-1 { color: #E861A0 }
+.color-complement-2 { color: #E13887 }
+.color-complement-3 { color: #BF005A }
+.color-complement-4 { color: #950046 }
+/* #4A4E55 */
+/* #31353D */
