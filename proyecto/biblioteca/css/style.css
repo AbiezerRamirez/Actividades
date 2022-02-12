@@ -226,12 +226,8 @@ nav:target > div > a:last-of-type {
     }
 
   .swiper-pagination {
-      /* color: var(--azul); */
     --swiper-theme-color: var(--azul);
   }
-    /* border-radius: 5px; */
-
-
 
 /* MAIN */
 
@@ -252,15 +248,41 @@ p {
     padding: .5em 1em;
 }
 
-table {
+main > section:last-child > div {
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding: 1em 0 3em;
 }
 
 table td, table th, table caption {
-    padding: 1em;
+    padding: .5rem;
+    text-align: center;
+}
+
+caption {
+    background: rgb(182,34,71);
+    background: linear-gradient(90deg, rgba(182,34,71,1) 0%, rgba(49,53,61,1) 100%);
+    color: var(--blanco);
+    margin-bottom: .1em;
+}
+
+table th {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+}
+
+table th:not(th:last-of-type) {
+    border-right: 2px solid var(--blanco);
+}
+
+table td {
+    transition: all .5s ease;
+}
+
+table td:hover {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 30px;
 }
 /* FOOTER */
 
@@ -290,6 +312,12 @@ footer > ul:last-of-type {
     justify-content: center;
 }
 
+footer > span {
+    display: block;
+    padding: .5em;
+    font-size: 1.2rem;
+}
+
 /* TABLET */
 
 @media screen and (min-width: 576px) {
@@ -300,19 +328,26 @@ footer > ul:last-of-type {
     header > div:first-of-type > div {
         display: block;
         flex-grow: 1;
+        /* position: relative; */
     }
     
     header > div:first-of-type > input {
         flex-grow: 0;
     }
     
-    header > div:first-of-type > div > span {
+    header > div:first-of-type > div > a {
         padding: .5em;
-        /* font-size: .4rem; */
         background-color: var(--azul);
         border-radius: 30px;
         color: var(--blanco);
+        transition: ease-out .5s;
     }
+    
+    header > div:first-of-type > div > a:hover {
+        color: var(--black);
+        outline: 3px solid var(--black);
+    }
+
 }
 
 /* DESKTOP */
@@ -338,9 +373,22 @@ footer > ul:last-of-type {
         padding: 3em 1em;
     }
 
+    /* nav ul a {
+        background-image: linear-gradient(var(--blanco), var(--blanco));
+        background-position: 50% 60%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+    }
+    nav ul a:hover, nav ul a:focus {
+        background-size: 70% 2px;
+    } */
+
     main {
         margin: 0 10vw;
         padding: 0 3em;
+        box-shadow: 5px 0 5px var(--black);
+        /* box-shadow: -5px 0 5px var(--black); */
     }
 
     main article {
