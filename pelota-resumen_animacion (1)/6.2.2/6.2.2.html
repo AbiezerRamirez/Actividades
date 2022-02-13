@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv"X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelota</title>
+    <style>
+        /* IMPORTANTE [CLASE] */
+        /* Es muy probable que ponga animaciones aleatorias en el examen  */
+
+
+        #repisa {
+            position: absolute;
+            background-image: url(img/repisa.png);
+            width: 220px;
+            height: 400px;
+            z-index: -1;
+        }
+
+        #pelota {
+            top: 16.2px;
+            position: relative;
+            animation: 
+            girar 2s 1s infinite linear,
+            mover 5s 1s infinite linear alternate;
+        }
+
+        .rail {
+            position: relative;
+            z-index: 0;
+            width: 100%;
+            height: 21.5vh;
+        }
+
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes mover {
+            0% {
+                left: 0px;
+                top: 16.2px;
+            }
+
+            16.66% {
+                left: 205px;
+                top: 16.2px;
+            }
+
+            33.33% {
+                left: 320px;
+                top: 420px;
+            }
+
+            50% {
+                left: 450px;
+                top: 300px;
+            }
+            66.66% {
+                left: 590px;
+                top: 420px;
+            }
+            83.33% {
+                left: 700px;
+                top: 327.8px;
+            }
+            90%{
+                left: 770px;
+                top: 420px;
+            }
+
+            100% {
+                left: 920px;
+                top: 420px;
+            } 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pelota saltarina</h1>
+    </header>
+    <main>
+        <div class="rail">
+            <img id="pelota" src="img/pelota.png" width="150px" height="150px">
+        </div>
+        <div id="repisa"></div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv"X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        .Anim_Cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(209, 135, 38);
+            position: relative;
+            
+            /* Propiedades de Animaciones */
+            /* Nombre Animacion */
+            animation-name: example;
+
+            /* Duracion */
+            animation-duration: 4s;
+
+            /* Repeticiones de la animacion */
+            animation-iteration-count: infinite;
+
+            /* Direccion de la animacion*/
+            animation-direction: alternate; /*Efecto rebote*/
+            /*
+            alternate-reverse               [Efecto rebote   / Empezando al reves]
+            normal;                         [Efecto infinito / No termina]
+            reverse;                        [Efecto infinito / normal+Empezando al reves]
+            */
+
+            /* Tiempo de espera para empezar*/
+            animation-delay: 1s;
+
+            /* Efecto de velocidad */
+            animation-timing-function: ease-out;
+            /* 
+            ease
+            ease-in
+            ease-out
+            ease-in-out
+            linear
+            step-start
+            steps
+            cubic-bezier(x,x,x,x)
+            https://codepen.io/Zuzana/full/yKayJw  [Ejemplo de todas las funciones]
+            */
+        }
+
+        @keyframes example {
+            0% {
+                background-color: rgb(209, 135, 38);
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation</h1>
+
+    <div class="Anim_Cuadrado"></div>
+
+    <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+</body>
+
+</html>

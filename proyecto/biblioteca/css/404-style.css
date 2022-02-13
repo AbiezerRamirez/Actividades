@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* SVG */
+
+:root {
+    --main-color: #b62247;
+    --black: #000;
+    --blanco: #fff;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg {
+    width: 100%;
+    height: 85%;
+}
+
+g.sombrero rect, svg text {
+    fill: var(--black);
+}
+
+rect.n4, path.n0 {
+    fill: var(--main-color);
+}
+
+path.n0 {
+    animation: saltar 15s 1ms infinite ease-in-out alternate;
+}
+
+g.sombrero {
+    animation: rotarSombrero 15s 1ms infinite ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+g.n4-b {
+    animation: saltar-rotar 20s 1ms infinite linear alternate-reverse;
+    transform-origin: 83% 50%;
+}
+
+g.n4-a {
+    animation: saltar-rotar 21s 1ms infinite linear alternate;
+    transform-origin: 17% 50%;
+}
+
+canvas {
+    align-self: flex-end;
+    margin-right: 8em;
+}
+
+a {
+    margin-top: .2em;
+    text-decoration: none;
+    color: var(--black);
+    padding: .5em;
+    font-size: 1.5rem;
+    background-image: linear-gradient(var(--blanco), var(--blanco));
+    background-position: 50% 75%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all .5s;
+}
+
+a:hover, a:focus {
+    background-color: var(--main-color);
+    border-radius: 30px;
+    color: var(--blanco);
+    background-size: 70% 2px;
+}
+
+@keyframes saltar-rotar {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    20% {
+        transform: rotate(5deg) translateY(-50px);
+    }
+    
+    40% {
+        transform: rotate(-5deg) translateY(0px);
+    }
+    
+    60% {
+        transform: rotate(5deg) translateY(50px);
+    }
+    
+    80% {
+        transform: rotate(-5deg) translateY(0px);
+    }
+    
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}
+
+@keyframes saltar {
+    0% {
+        transform: translate(0px);
+    }
+    
+    33.3% {
+        transform: translateY(-50px);
+    }
+
+    66.6% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }  
+}
+
+@keyframes rotarSombrero {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    33.33% {
+        transform: rotate(10deg) translateY(-120px);
+    }
+    
+    66.66% {
+        transform: rotate(-10deg) translateY(-50px);
+    }
+    
+    100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+}
