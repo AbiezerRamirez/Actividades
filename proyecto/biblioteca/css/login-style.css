@@ -1,0 +1,159 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff url("../assets/img/books.jpg") repeat-y fixed;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+:root {
+    --black: #141518;
+    --white: #ffe;
+    --white2: #F7F7F7;
+    --white3: #F0F0F0;
+    --gris: #4A4E55;
+    --gris-oscuro: #31353D;
+    --gris-claro: #EFEFEF;
+    --blanco: #fff;
+    --main-color: #b62247;
+    --verde: rgb(87, 199, 64);
+}
+
+h1 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body > div {
+    border: 10px solid var(--gris-oscuro);
+    border-image-width: 2;
+    border-image-source: url(../assets/img/borde.png);
+    border-image-slice: 4%;
+    border-image-repeat: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffffff;
+    padding: 2em;
+}
+
+body > div > div {
+    display: inline;
+    width: 5px;
+    height: 380px;
+    background-color: var(--main-color);
+}
+
+html, input {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+legend {
+    font-size: 2rem;
+    text-align: center;
+    padding: .5em 0;
+    margin: 0 0 .5em;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+form {
+    padding: 0 1.5em;
+}
+
+form p {
+    margin: 1em 0 .5em;
+}
+
+input {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    outline: none;
+}
+
+input:required:valid {
+    border-bottom: 2px solid var(--verde);
+    background: url(../assets/img/sprite.png) no-repeat right 5px;
+}
+
+input:required:invalid {
+    border-bottom: 2px solid var(--gris);
+    background: url(../assets/img/sprite.png) no-repeat right -38px;
+}
+
+input:required:invalid:focus {
+    border-bottom: 2px solid var(--main-color);
+}
+
+input:not([type="submit"]) {
+    transition: ease background-color .3s;
+}
+
+input:not([type="submit"]):hover, input:not([type="submit"]):active, input:not([type="submit"]):focus {
+    background-color: var(--gris-claro);
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1em;
+    padding: .7em;
+    transition: ease-in all .2s;
+}
+
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+    color: var(--blanco);
+    background-color: var(--main-color);
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        width: auto;
+        height: auto;
+    }
+    body > div > div {
+        margin-top: 2em;
+        width: 70vw;
+        height: 5px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap&text=BILIOTECAIniciar SesionRegistrarse">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600" rel="stylesheet">
+    <link rel="stylesheet" href="css/login-style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div>
+        <h1><a href="index.html">BIBLIOTECA</a></h1>
+        <form action="#">
+            <legend>Iniciar Sesion</legend>
+            <p>Usuario</p>
+            <input type="text" name="user" id="userL" pattern="[a-zA-Z0-9_-ñÑ]{1,}" required>
+            <p>Contraseña</p>
+            <input type="password" name="passwd" id="passwdL" pattern="[\w]{8,}" required>
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+        <div></div>
+        <form action="#">
+            <legend>Registrarse</legend>
+            <p>Correo</p>
+            <input type="email" name="mail" id="mail" pattern="[\w.%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" required>
+            <p>Usuario</p>
+            <input type="text" name="user" id="userR" pattern="[a-zA-Z0-9_-ñÑ]{1,}" required>
+            <p>Contraseña</p>
+            <input type="password" name="passwd" id="passwdR" pattern="[\w]{8,}" required>
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+</body>
+
+</html>
