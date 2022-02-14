@@ -51,9 +51,14 @@ g.n4-a {
     transform-origin: 17% 50%;
 }
 
-canvas {
+/* canvas {
     align-self: flex-end;
     margin-right: 8em;
+} */
+
+#canvas {
+    position: fixed;
+    z-index: -1;
 }
 
 a {

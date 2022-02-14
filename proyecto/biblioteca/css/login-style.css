@@ -43,10 +43,11 @@ ol, ul {
     --white: #ffe;
     --white2: #F7F7F7;
     --white3: #F0F0F0;
-    --gris: #4A4E55;
     --gris-oscuro: #31353D;
-    --gris-claro: #EFEFEF;
     --blanco: #fff;
+    --negro: #000;
+    --gris: #4A4E55;
+    --gris-claro: #EFEFEF;
     --main-color: #b62247;
     --verde: rgb(87, 199, 64);
 }
@@ -61,7 +62,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--negro);
 }
 
 body > div {
@@ -73,11 +74,11 @@ body > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #ffffff;
+    background-color: var(--blanco);
     padding: 2em;
 }
 
-body > div > div {
+body > div > div:first-of-type {
     display: inline;
     width: 5px;
     height: 380px;
@@ -146,12 +147,39 @@ input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:fo
     background-color: var(--main-color);
 }
 
+.spinner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner {
+    margin-top: 1em;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+  
+    animation: spin 1s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 @media screen and (max-width: 760px) {
     body {
         width: auto;
         height: auto;
     }
-    body > div > div {
+    body > div > div:first-of-type {
         margin-top: 2em;
         width: 70vw;
         height: 5px;
