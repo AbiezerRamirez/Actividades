@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --blanco: #fff;
+    --negro: #121212;
+    --rojo: #910F0D;
+    --azul: #2d60bd;
+    --verde: #4abd2d;
+    --amarillo: rgb(190, 152, 46);
+}
+
+h1 {
+    background: var(--negro);
+    background: -webkit-linear-gradient(to right, var(--negro) 0%, var(--rojo) 100%);
+    background: -moz-linear-gradient(to right, var(--negro) 0%, var(--rojo) 100%);
+    background: linear-gradient(to right, var(--negro), var(--rojo) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 30vh 1fr;
+    grid-template-areas: 
+        "header"
+        "main";
+}
+
+body > header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body > header > h1 {
+    font-size: 7rem;
+}
+
+main {
+    position: relative;
+    grid-area: main;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    background: var(--negro);
+    background: linear-gradient(180deg, var(--negro) 0%, var(--azul) 100%);
+}
+
+ul {
+    margin: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 2em;
+}
+
+ul > li.list-item {
+    position: relative;
+    z-index: 10;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, .5);
+    width: 300px;
+    border: 2px solid var(--negro);
+}
+ul > li.list-item:hover {
+    transform: scale(1.1);
+    background-color: var(--amarillo);
+}
+ul > li.list-item:hover img {
+    transform: rotate(0deg);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    filter: grayscale(100%);
+}
+
+.list-item p {
+    margin: 1em;
+}
+
+.list-item:nth-child(even) img {
+    transform: rotate(15deg);
+}
+.list-item:nth-child(odd) img {
+    transform: rotate(-15deg);
+}
+
+#canvas {
+    position: absolute;
+    bottom: 0%;
+}
+
+#copo {
+    display: none;
+}
+
+
+.nevar {
+    fill: var(--rojo);
+}
+
+.no-nevar {
+    fill: var(--negro);
+}
+
+.nevar circle:first-of-type {
+    animation: ocultar 2s ease-in-out 2s infinite alternate;
+}
+.nevar circle:nth-of-type(2) {
+    animation: ocultar 2s ease-in-out 0s infinite alternate;
+}
+.nevar circle:nth-of-type(3) {
+    animation: ocultar 2s ease-in-out 1.5s infinite alternate;
+}
+.nevar circle:nth-of-type(4) {
+    animation: ocultar 2s ease-in-out .5s infinite alternate;
+}
+.nevar circle:last-of-type {
+    animation: ocultar 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes ocultar {
+    0% {
+        r: 10;
+    }
+    
+    100% {
+        r: 0;
+    }
+}
+
+ul > li > div > p:first-of-type {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        background: var(--negro);
+        background: linear-gradient(0deg, var(--negro) 0%, var(--verde) 100%);
+    }
+
+    ul > li.list-item {
+        padding: 1em;
+        text-align: center;
+        flex-direction: column;
+        width: 150px;
+        height: 250px;
+    }
+}

@@ -12,7 +12,7 @@ setSize();
 function setSize() {
     canvas.height = innerHeight;
     canvas.width = innerWidth;
-  }
+}
 
 function gameLoop(timeStamp) {
     update();
